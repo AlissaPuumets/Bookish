@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root {
+    --base-color: #202020;
+    --base-variant: #202020;
+    --text-color: white;
+    --secondary-text: white;
+    --button-base: white;
+    --button-text: #202020;
+}
+
+.lightmode {
+    --base-color: white;
+    --base-variant: #202020;
+    --text-color: white;
+    --secondary-text: #202020;
+    --button-base: white;
+    --button-text: #202020;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--base-color);
+    font-family: 'Bebas Neue', cursive;
+}
+
+h1 {
+    color: var(--secondary-text);
+    font-size: 150px;
+    justify-content: center;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+/* Login kast */
+.login {
+    color: var(--text-color);
+    background: var(--base-variant);
+    border-radius: 4px;
+    text-align: center;
+    height: 500px;
+    width: 800px;
+    border: 1px solid white;
+}
+
+.login label {
+    display: block;
+    margin: 65px auto 0;
+    font-size: 40px;
+}
+
+.login label[for="password"] {
+    margin-top: 70px;
+}
+
+/* Inputid */
+.login input[type="text"],
+.login input[type="password"] {
+    display: block;
+    margin: 25px auto 0;
+    height: 25px;
+    width: 250px;
+    font-size: 20px;
+    color: var(--text-color);
+    background: var(--base-variant);
+    border: 1px solid white;
+}
+
+/* Log in nupp */
+.login input[type="submit"] {
+    background: var(--button-base);
+    border: 1px solid var(--base-variant);
+    color: var(--button-text);
+    height: 50px;
+    width: 150px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 40px;
+    display: block;
+    margin: 90px auto 0;
+}
+
+#theme-switch {
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--base-variant);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    margin-left: 1370px;
+    margin-top: 5px;
+}
+
+#theme-switch svg {
+    fill: var(--text-color);
+}
+
+#theme-switch svg:last-child {
+    display: none;
+}
+
+.lightmode #theme-switch svg:first-child {
+    display: none;
+}
+
+.lightmode #theme-switch svg:last-child {
+    display: block;
+}
