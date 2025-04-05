@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 :root {
     --base-color: #202020;
@@ -11,11 +11,11 @@
 
 .lightmode {
     --base-color: white;
-    --base-variant: #202020;
+    --base-variant: #dabbc4;
     --text-color: white;
     --secondary-text: #202020;
-    --button-base: white;
-    --button-text: #202020;
+    --button-base: #202020;
+    --button-text: white;
 }
 
 body {
@@ -24,7 +24,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: var(--base-color);
-    font-family: 'Bebas Neue', cursive;
+    font-family: "Playfair Display", serif;
 }
 
 h1 {
@@ -65,8 +65,8 @@ h1 {
     width: 250px;
     font-size: 20px;
     color: var(--text-color);
-    background: var(--base-variant);
-    border: 1px solid white;
+    background: var(--button-base);
+    border: 1px solid var(--button-base);
 }
 
 /* Log in nupp */
@@ -76,10 +76,10 @@ h1 {
     color: var(--button-text);
     height: 50px;
     width: 150px;
-    font-family: 'Bebas Neue', cursive;
-    font-size: 40px;
+    font-size: 25px;
     display: block;
     margin: 90px auto 0;
+    font-family: "Playfair Display", serif;
 }
 
 #theme-switch {
