@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+:root {
+    --base-color: #2E2E2E;
+    --base-variant: #464646;
+    --text-color: #CAACB3;
+    --secondary-text: white;
+    --button-base: #464646;
+    --button-text: #CAACB3;
+}
+
+body {
+    font-family: 'Playfair Display SC', serif;
+    background-color: var(--base-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1 {;
+    margin: 70px 0;
+    font-size: 60px;
+}
