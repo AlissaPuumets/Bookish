@@ -27,7 +27,6 @@ form {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: none;
 }
 
 input {
@@ -54,6 +53,7 @@ button {
     cursor: pointer;
     font-size: 1em;
     margin: 50px;
+    border: none;
 }
 button:hover {
     background-color: var(--text-color);
