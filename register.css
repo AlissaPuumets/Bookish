@@ -47,12 +47,12 @@ input::placeholder {
 
 button {
     background-color: var(--button-base);
-    color: red;
+    color: var(--button-text);
     padding: 10px 20px;
+    border-radius: 5px;
     cursor: pointer;
     font-size: 1em;
     margin: 50px;
-    border: none;
 }
 button:hover {
     background-color: var(--text-color);
