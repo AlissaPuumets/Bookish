@@ -1,4 +1,7 @@
 const url = "https://kool.krister.ee/chat/Bookish";
+const bookCardTemplate = document.querySelector("[data-book-template]");
+const bookCardContainer = document.querySelector("[data-book-cards-container]");
+const searchInput = document.querySelector("[data-search]");
 
 // Add a book draggable modal
 const modal = document.getElementById("myModal");
@@ -60,3 +63,46 @@ document.getElementById("myForm").addEventListener("submit", function (event) {
             }
         })
 });
+
+let books = [];
+
+searchInput.addEventListener("input", e => {
+    const value = e.target.value.toLowerCase();
+    books.forEach(book => {
+        const titleMatch = book.title.toLowerCase().includes(value);
+        const genreMatch = (book.genre || "").toLowerCase().includes(value);
+        const isVisible = titleMatch || genreMatch;
+
+        console.log(`Checking "${book.title}" - Visible: ${isVisible}`);
+
+        book.element.classList.toggle("hide", !isVisible);
+    });
+});
+
+fetch (url)
+    .then(res => res.json())
+    .then(data => {
+        books = data.map(book => {
+            const card = bookCardTemplate.content.cloneNode(true).children[0];
+            const header = card.querySelector("[data-header]");
+            const body = card.querySelector("[data-body]");
+            const genre = card.querySelector("[data-genre]");
+
+            const title = book.title || "Untitled";
+            const author = book.author || "Unknown Author";
+            const genreText = book.genre || "No Genre";
+
+            header.textContent = title;
+            body.textContent = author;
+            genre.textContent = genreText;
+
+            bookCardContainer.append(card);
+
+            return {
+                title,
+                author,
+                genre: genreText,
+                element: card
+            };
+        });
+    });

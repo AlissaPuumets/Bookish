@@ -13,26 +13,31 @@
     <button id="openModalBtn">Add</button>
     <h1>Bookish</h1>
     <div class="search-wrapper">
-        <input id="search" type="search" placeholder="Search for books...">
-        <button id="search-button">Search</button>
+        <label for="search">Search for books..</label>
+        <input type="search" id="search" data-search>
     </div>
-    <div class="book-cards">
-        <div class="card"></div>
-    </div>
+    <div class="book-cards" data-book-cards-container></div>
+    <template data-book-template>
+        <div class="card">
+            <div class="header" data-header>Book</div>
+            <div class="body" data-body>Author</div>
+            <div class="genre" data-genre>Genre</div>
+        </div>
+    </template>
     <div class="modal" id="myModal">
-    <div class="modal-header" id="modalHeader">
-      Add A Book
-      <span class="close-btn" id="closeBtn">✖</span>
+        <div class="modal-header" id="modalHeader">
+            Add A Book
+            <span class="close-btn" id="closeBtn">✖</span>
+        </div>
+        <div class="modal-content">
+            <form id="myForm">
+                <input type="text" name="title" placeholder="Title">
+                <input type="text" name="author" placeholder="Author">
+                <input type="text" name="genre" placeholder="Genre">
+                <button id="sumbit">Add Book</button>
+            </form>
+        </div>
     </div>
-    <div class="modal-content">
-        <form id="myForm">
-            <input type="text" name="title" placeholder="Title">
-            <input type="text" name="author" placeholder="Author">
-            <input type="text" name="genre" placeholder="Genre">
-            <button id="sumbit">Add Book</button>
-        </form>
-    </div>
-  </div>
 </body>
 
 </html>
