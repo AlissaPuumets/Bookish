@@ -1,4 +1,4 @@
-const url = "https://kool.krister.ee/chat/Bookish";
+const url = "https://kool.krister.ee/chat/Bookishh";
 const bookCardTemplate = document.querySelector("[data-book-template]");
 const bookCardContainer = document.querySelector("[data-book-cards-container]");
 const searchInput = document.querySelector("[data-search]");
@@ -50,7 +50,7 @@ document.getElementById("myForm").addEventListener("submit", function (event) {
         jsonData[key] = value;
     });
 
-    fetch("https://kool.krister.ee/chat/Bookish", {
+    fetch("https://kool.krister.ee/chat/Bookishh", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
