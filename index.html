@@ -5,16 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main</title>
-    <link rel="stylesheet" href="css/mainpage.css">
-    <script src="" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
-<nav>
-    <ul>
-        <li><a href="list.html">My List</a></li>
-    </ul>
-</nav>
 <body>
+    <button id="openModalBtn">Add</button>
     <h1>Bookish</h1>
     <div class="search-wrapper">
         <input id="search" type="search" placeholder="Search for books...">
@@ -23,6 +19,20 @@
     <div class="book-cards">
         <div class="card"></div>
     </div>
+    <div class="modal" id="myModal">
+    <div class="modal-header" id="modalHeader">
+      Add A Book
+      <span class="close-btn" id="closeBtn">✖</span>
+    </div>
+    <div class="modal-content">
+        <form id="myForm">
+            <input type="text" name="title" placeholder="Title">
+            <input type="text" name="author" placeholder="Author">
+            <input type="text" name="genre" placeholder="Genre">
+            <button id="sumbit">Add Book</button>
+        </form>
+    </div>
+  </div>
 </body>
 
 </html>
