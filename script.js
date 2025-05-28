@@ -1,10 +1,10 @@
-const url = "https://kool.krister.ee/chat/Bookishh";
+const url = "https://kool.krister.ee/chat/Bookish";
 const bookCardTemplate = document.querySelector("[data-book-template]");
 const bookCardContainer = document.querySelector("[data-book-cards-container]");
 const searchInput = document.querySelector("[data-search]");
 
-// Add a book draggable modal
-const modal = document.getElementById("myModal");
+// väike aknake
+const modal = document.getElementById("aknake");
 const header = document.getElementById("modalHeader");
 const closeBtn = document.getElementById("closeBtn");
 const openModalBtn = document.getElementById("openModalBtn");
@@ -35,11 +35,12 @@ document.addEventListener("mouseup", () => {
 
 document.addEventListener("mousemove", (e) => {
     if (isDragging) {
-        modal.style.left = `${e.clientX - offsetX}px`;
-        modal.style.top = `${e.clientY - offsetY}px`;
+        modal.style.left = (e.clientX - offsetX) + "px";
+        modal.style.top = (e.clientY - offsetY) + "px";
     }
 });
 
+// form raamatutele
 document.getElementById("myForm").addEventListener("submit", function (event) {
     event.preventDefault();
 
@@ -50,7 +51,7 @@ document.getElementById("myForm").addEventListener("submit", function (event) {
         jsonData[key] = value;
     });
 
-    fetch("https://kool.krister.ee/chat/Bookishh", {
+    fetch(url, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -60,12 +61,15 @@ document.getElementById("myForm").addEventListener("submit", function (event) {
         .then(response => {
             if (response.ok) {
                 alert("Success! 💌");
+                this.reset();
             }
         })
 });
 
 let books = [];
 
+
+//searchi osa
 searchInput.addEventListener("input", e => {
     const value = e.target.value.toLowerCase();
     books.forEach(book => {
@@ -79,6 +83,7 @@ searchInput.addEventListener("input", e => {
     });
 });
 
+// jookseb raamatutele järgi
 fetch (url)
     .then(res => res.json())
     .then(data => {
