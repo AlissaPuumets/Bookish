@@ -42,7 +42,6 @@ document.addEventListener("mousemove", (e) => {
 
 // form raamatutele
 document.getElementById("myForm").addEventListener("submit", function (event) {
-    event.preventDefault();
 
     const formData = new FormData(this);
 
