@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="script.js" defer></script>
 </head>
 
@@ -21,7 +21,9 @@
             <div class="header" data-header>Book</div>
             <div class="body" data-body>Author</div>
             <div class="genre" data-genre>Genre</div>
-        </div>
+            <div class="image" data-image>
+                <img src="images/download.png" alt="Book Cover">
+            </div>
     </template>
     <div class="modal" id="aknake">
         <div class="modal-header" id="modalHeader">
@@ -30,6 +32,8 @@
         </div>
         <div class="modal-content">
             <form id="myForm">
+                <img src="images/download.png">
+                <input id="file" type="file" accept="image/jpeg, image/png, image/jpg">
                 <input type="text" name="title" placeholder="Title">
                 <input type="text" name="author" placeholder="Author">
                 <input type="text" name="genre" placeholder="Genre">
